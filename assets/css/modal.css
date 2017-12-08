@@ -1,0 +1,66 @@
+/* 
+The Style sheet for all modals.
+Constructed using Scss
+*/
+.modal-container {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px; }
+  .modal-container .modal-overlay {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background: black;
+    opacity: 0.8;
+    animation: In 0.2s ease-in 0s 1; }
+  .modal-container .cu-modal-content {
+    position: relative;
+    top: 26%;
+    left: 28%;
+    height: 170px;
+    width: 500px;
+    background: #393E46;
+    border-radius: 20px;
+    color: #FFFBFC;
+    opacity: 0;
+    animation: fadeIn 0.2s ease-in 0s 1;
+    animation-fill-mode: forwards; }
+    .modal-container .cu-modal-content .cu-modal-header {
+      position: relative;
+      left: 5%;
+      top: 4%;
+      font-size: 34px; }
+    .modal-container .cu-modal-content .modal-disc {
+      position: relative;
+      top: 18px;
+      left: 1%;
+      font-size: 18px;
+      text-align: center; }
+    .modal-container .cu-modal-content .ok-button {
+      position: relative;
+      border-radius: 25px;
+      height: 33px;
+      width: 87px;
+      font-size: 18px;
+      border: 2px solid #FFFBFC;
+      text-align: center;
+      left: 78%;
+      top: 24px;
+      transition: 0.2s;
+      cursor: pointer; }
+      .modal-container .cu-modal-content .ok-button:hover {
+        background: #FFFBFC;
+        color: #393E46; }
+  .modal-container .extended-modal {
+    height: 240px; }
+
+@keyframes fadeIn {
+  to {
+    top: 33%;
+    opacity: 1; } }
+
+/*# sourceMappingURL=modal.css.map */

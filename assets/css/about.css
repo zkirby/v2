@@ -1,0 +1,361 @@
+/* 
+The Style sheet for the about page.
+Constructed using Scss
+*/
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #393E46;
+  overflow: hidden; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  padding: 0px; }
+  .main #particles-js {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    background-color: #222831; }
+  .main .nav {
+    width: 100%;
+    height: 15%;
+    position: relative;
+    margin: 0px; }
+    .main .nav .bottom {
+      width: 0%;
+      height: 2px;
+      background-color: #00FFF5;
+      top: 100%;
+      animation: growRight 0.5s ease-in 0s 1;
+      animation-fill-mode: forwards; }
+    .main .nav .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #393E46;
+      left: 2%;
+      top: 18%;
+      border-radius: 150px;
+      opacity: 0.6;
+      transition: 0.7s;
+      position: absolute; }
+      .main .nav .logo svg {
+        position: absolute;
+        top: -34%;
+        left: -81%;
+        height: 86px; }
+    .main .nav .invis {
+      top: 18%;
+      left: 2%;
+      background-color: transparent;
+      overflow: hidden;
+      z-index: 1;
+      cursor: pointer; }
+    .main .nav .title {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 89px;
+      letter-spacing: 9px;
+      color: #FFFBFC;
+      opacity: 0.8;
+      transition: 0.4s;
+      font-family: 'Questrial', sans-serif;
+      font-size: 88px;
+      font-weight: bold; }
+      .main .nav .title:hover {
+        opacity: 1; }
+  .main .content {
+    width: 102.5%;
+    height: 90%;
+    position: relative; }
+    .main .content .overlay {
+      height: 100%;
+      width: 100%;
+      opacity: 0.2;
+      background-color: black;
+      position: relative;
+      z-index: -2; }
+    .main .content .img-container {
+      height: 100%;
+      position: absolute;
+      width: 50%;
+      left: 43.5%;
+      top: 0%; }
+      .main .content .img-container .pic {
+        height: 75%;
+        position: relative;
+        top: 10%;
+        left: 36%;
+        border-radius: 25px;
+        opacity: 1;
+        border: 1.5px solid #FFFBFC;
+        filter: grayscale(5%); }
+    .main .content .disc-container {
+      height: 100%;
+      position: absolute;
+      left: 6.5%;
+      top: 0%;
+      width: 50%;
+      padding-right: 0px;
+      text-align: center; }
+      .main .content .disc-container .discption {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        letter-spacing: 1px; }
+        .main .content .disc-container .discption #title-text {
+          top: 12%; }
+        .main .content .disc-container .discption #disc-text {
+          top: 18%;
+          opacity: 0;
+          animation: fadeUp 0.5s ease-in 0s 1;
+          animation-fill-mode: forwards; }
+        .main .content .disc-container .discption .highlight {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1.5px solid #00FFF5;
+          margin-bottom: -9px;
+          font-weight: bold; }
+      .main .content .disc-container .organizations {
+        position: relative;
+        width: 100%;
+        height: 50%; }
+        .main .content .disc-container .organizations #title-text {
+          top: 23%; }
+        .main .content .disc-container .organizations .contact-container {
+          position: absolute;
+          top: 65%;
+          width: 79%;
+          left: 9%;
+          height: 80%;
+          text-align: center; }
+          .main .content .disc-container .organizations .contact-container #contact-item {
+            position: relative;
+            display: inline-block;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            color: #FFFBFC;
+            margin: 15px 0px 0px 15px;
+            cursor: pointer;
+            border-radius: 100px;
+            transition: 0.3s; }
+            .main .content .disc-container .organizations .contact-container #contact-item:hover {
+              background: #FFFBFC; }
+          .main .content .disc-container .organizations .contact-container #custom-item {
+            position: relative;
+            display: inline-block;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            color: #FFFBFC;
+            margin: 15px 0px 0px 15px;
+            border-radius: 100px; }
+          .main .content .disc-container .organizations .contact-container .email-icon {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border-radius: 100px;
+            left: 0%;
+            font-size: 22px;
+            border: 1.5px solid #FFFBFC; }
+            .main .content .disc-container .organizations .contact-container .email-icon .icon {
+              position: relative;
+              top: 25%; }
+            .main .content .disc-container .organizations .contact-container .email-icon:hover {
+              color: #393E46; }
+          .main .content .disc-container .organizations .contact-container .cfsvg {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border-radius: 100px;
+            border: 1.5px solid #FFFBFC;
+            z-index: -1;
+            transition: 0.3s; }
+            .main .content .disc-container .organizations .contact-container .cfsvg polygon {
+              fill: #FFFBFC; }
+            .main .content .disc-container .organizations .contact-container .cfsvg svg {
+              position: relative;
+              right: 77%;
+              top: -17%;
+              height: 145%; }
+          .main .content .disc-container .organizations .contact-container .ghost-selector {
+            position: absolute;
+            border-radius: 100px;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            z-index: 10; }
+          .main .content .disc-container .organizations .contact-container .linkedinsvg,
+          .main .content .disc-container .organizations .contact-container .githubsvg,
+          .main .content .disc-container .organizations .contact-container .facebooksvg,
+          .main .content .disc-container .organizations .contact-container .behancesvg {
+            width: 100%;
+            position: absolute; }
+            .main .content .disc-container .organizations .contact-container .linkedinsvg path, .main .content .disc-container .organizations .contact-container .linkedinsvg rect,
+            .main .content .disc-container .organizations .contact-container .githubsvg path,
+            .main .content .disc-container .organizations .contact-container .githubsvg rect,
+            .main .content .disc-container .organizations .contact-container .facebooksvg path,
+            .main .content .disc-container .organizations .contact-container .facebooksvg rect,
+            .main .content .disc-container .organizations .contact-container .behancesvg path,
+            .main .content .disc-container .organizations .contact-container .behancesvg rect {
+              fill: #FFFBFC; }
+            .main .content .disc-container .organizations .contact-container .linkedinsvg:hover .p1, .main .content .disc-container .organizations .contact-container .linkedinsvg:hover rect,
+            .main .content .disc-container .organizations .contact-container .githubsvg:hover .p1,
+            .main .content .disc-container .organizations .contact-container .githubsvg:hover rect,
+            .main .content .disc-container .organizations .contact-container .facebooksvg:hover .p1,
+            .main .content .disc-container .organizations .contact-container .facebooksvg:hover rect,
+            .main .content .disc-container .organizations .contact-container .behancesvg:hover .p1,
+            .main .content .disc-container .organizations .contact-container .behancesvg:hover rect {
+              fill: #393E46; }
+      .main .content .disc-container #title-text {
+        position: relative;
+        color: #FFFBFC;
+        font-size: 50px;
+        font-family: 'Questrial', sans-serif; }
+      .main .content .disc-container #disc-text {
+        position: relative;
+        color: #FFFBFC;
+        opacity: 0.7;
+        width: 97%;
+        left: 1%;
+        font-size: 22px;
+        font-family: 'Questrial', sans-serif; }
+
+@keyframes growRight {
+  to {
+    width: 100%; } }
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    top: 10%; } }
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+/* Media Queries */
+@media (min-width: 1920px) and (max-height: 1080px) {
+  .main #particles-js {
+    width: 102%; }
+
+  .main .nav .title {
+    line-height: 150px; }
+
+  .main .content .disc-container #disc-text {
+    font-size: 41px; }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%; }
+
+  .row .hamburger {
+    left: 94%;
+    top: 30%; } }
+@media (max-width: 1366px) and (max-width: 768px) {
+  .main #particles-js {
+    width: 102%; }
+
+  .main .nav .title {
+    line-height: 115px; }
+
+  .main .content .disc-container #disc-text {
+    font-size: 29px; }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%; }
+
+  .main .nav {
+    width: 102%; }
+
+  .row .hamburger {
+    left: 94%;
+    top: 30%; } }
+@media (max-width: 1280px) and (max-width: 1024px) {
+  .main #particles-js {
+    width: 102%; }
+
+  .main .content .img-container .pic {
+    left: 29%; }
+
+  .main .nav .title {
+    line-height: 138px; }
+
+  .main .content .disc-container #disc-text {
+    font-size: 32px; }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%; }
+
+  .main .content {
+    width: 103.5%; }
+
+  .row .hamburger {
+    left: 94%;
+    top: 30%; } }
+@media (max-width: 1024px) and (min-height: 768px) {
+  .main .content .img-container .pic {
+    left: 29%; }
+
+  .main .nav .title {
+    line-height: 113px; }
+
+  .main .content .disc-container #disc-text {
+    font-size: 25px; }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%; }
+
+  .main .content .disc-container .organizations .contact-container {
+    width: 81%; }
+
+  .row .hamburger {
+    left: 94%;
+    top: 30%; } }
+@media (max-width: 375px) {
+  .main {
+    overflow: hidden; }
+
+  .main .nav .title {
+    line-height: 113px; }
+
+  .main .content {
+    width: 95.5%; }
+
+  .main .content .img-container {
+    display: none; }
+
+  .main .content .disc-container {
+    width: 100%;
+    top: -5%; }
+
+  .main #particles-js {
+    width: 100%; }
+
+  .main .nav .title {
+    left: 1%;
+    top: -3%;
+    position: relative;
+    font-size: 70px; }
+
+  .main .content .overlay {
+    height: 100%;
+    width: 110%; }
+
+  .main .content .disc-container #disc-text {
+    font-size: 19px; }
+
+  .main .nav {
+    width: 100%; }
+
+  .row .hamburger, .row .nav-menu {
+    left: 86%; } }
+@media (max-width: 360px) {
+  .main .content .disc-container .discption {
+    top: -5%; }
+
+  .main .content .disc-container {
+    top: 0%; } }
+
+/*# sourceMappingURL=about.css.map */

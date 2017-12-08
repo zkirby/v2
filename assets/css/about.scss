@@ -1,0 +1,531 @@
+/* 
+The Style sheet for the about page.
+Constructed using Scss
+*/
+
+// Color Palette
+$hardbackground: #222831;
+$softbackground: #393E46;
+$background: #00ADB5;
+$highlight: #00FFF5;
+$softhighlight: #FFFBFC;
+
+// Variables 
+$posDisc: 12%;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: $softbackground;
+  overflow: hidden; //meh?
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  padding: 0px;
+
+  #particles-js{
+      width: 100%;
+      height: 15%;
+      position: absolute;
+      background-color: $hardbackground;
+    }
+
+  .nav {
+    width: 100%;
+    height: 15%;
+    position: relative;
+    margin: 0px;
+
+    .bottom {
+      width: 0%;
+      height: 2px;
+      background-color: $highlight;
+      top: 100%;
+      animation: growRight 0.5s ease-in 0s 1;
+      animation-fill-mode: forwards;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #393E46;
+      left: 2%;
+      top: 18%;
+      border-radius: 150px;
+      opacity: 0.6;
+      transition: 0.7s;
+      position: absolute;
+
+      svg {
+        position: absolute;
+        top: -34%;
+        left: -81%;
+        height: 86px;
+      }
+    }
+
+   .invis {
+      top: 18%;
+      left: 2%;
+      background-color: transparent;
+      overflow: hidden;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .title {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 89px;
+      letter-spacing: 9px;
+      //position: absolute;
+      color: $softhighlight;
+      //background-color: $softbackground;
+      opacity: 0.8;
+      //border-radius: 35px;
+      transition: 0.4s;
+    
+      font: {
+        //family: 'Lobster', cursive;
+        family: 'Questrial', sans-serif;
+          //family: 'Rubik', sans-serif;
+        size: 88px;
+        weight: bold;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .content {
+    width: 102.5%;
+    height: 90%;
+    position: relative;
+   // background-color: red;
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      opacity: 0.2;
+      background-color: black;
+      position: relative;
+      z-index: -2;
+    }
+
+    .img-container {
+      height: 100%;
+      position: absolute;
+      width: 50%;
+      left: 43.5%; 
+      top: 0%;
+
+       .pic {
+            height: 75%;
+            position: relative;
+            top: 10%;
+            left: 36%;
+            border-radius: 25px;
+            //opacity: 0;
+            opacity: 1;
+            //animation: fadeIn 1s ease-in 0s 1;
+            //animation-fill-mode: forwards;
+            border: 1.5px solid $softhighlight;
+            filter: grayscale(5%);
+        }
+    }
+
+    .disc-container {
+      height: 100%;
+      position: absolute;
+      left: 6.5%; // <---
+      top: 0%;
+      width: 50%;
+      padding-right: 0px;
+      text-align: center;
+
+      .discption {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        letter-spacing: 1px;
+
+        #title-text { top: $posDisc; }
+        #disc-text { 
+          top: 18%;
+          opacity: 0;
+          animation: fadeUp 0.5s ease-in 0s 1;
+          animation-fill-mode: forwards;
+        }
+
+        .highlight {
+          position: relative;
+          display: inline-block;
+          //color: $highlight;
+          //background: $highlight;
+          border-bottom: 1.5px solid $highlight;
+          margin-bottom: -9px;
+          //text-shadow: 1px 1px 2px $softhighlight; 
+          font : {
+            weight: bold;
+          }
+        }
+      }
+
+      .organizations {
+        position: relative;
+        width: 100%;
+        height: 50%;
+
+        #title-text { top: 23%; }
+        .contact-container {
+          position: absolute;
+          top: 65%;
+          width: 79%;
+          left: 9%;
+          height: 80%;
+          text-align: center;
+
+            #contact-item {
+              position: relative;
+              display: inline-block;
+              align-items: center;
+              height: 50px;
+              width: 50px;
+              color: $softhighlight;
+              margin: 15px 0px 0px 15px;
+              cursor: pointer;
+              border-radius: 100px;
+              transition: 0.3s;
+
+              &:hover {
+                background: $softhighlight;
+              }
+            }
+
+            #custom-item {
+              position: relative;
+              display: inline-block;
+              align-items: center;
+              height: 50px;
+              width: 50px;
+              color: $softhighlight;
+              margin: 15px 0px 0px 15px;
+              border-radius: 100px;
+            }
+
+            .email-icon {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              border-radius: 100px;
+              left: 0%;
+              font-size: 22px;
+              border: 1.5px solid $softhighlight;
+              
+              .icon {
+                position: relative;
+                top: 25%;
+              }
+
+              &:hover {
+                color: $softbackground;
+              }
+            }
+
+            .cfsvg {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              border-radius: 100px;
+              border: 1.5px solid $softhighlight;
+              z-index: -1;
+              transition: 0.3s;
+
+              polygon {
+                fill: $softhighlight;
+              }
+
+              svg {
+                position: relative;
+                right: 77%;
+                top: -17%;
+                height: 145%;
+              }
+
+            }
+
+            .ghost-selector {
+              position: absolute;
+              border-radius: 100px;
+              height: 100%;
+              width: 100%;
+              cursor: pointer;
+              z-index: 10;
+            }
+
+            .linkedinsvg,
+            .githubsvg,
+            .facebooksvg,
+            .behancesvg {
+              width: 100%;
+              position: absolute;
+
+              path, rect {
+                fill: $softhighlight;
+              }
+
+              &:hover {
+                .p1, rect {
+                  fill: $softbackground;
+                }
+              }
+            }
+          }
+
+      }
+
+      #title-text { 
+        position: relative; 
+        color: $softhighlight;
+
+        font: {
+          size: 50px;
+          family: 'Questrial', sans-serif;
+        }
+      }
+
+      #disc-text {
+        position: relative;
+        color: $softhighlight;
+        opacity: 0.7;
+        width: 97%;
+        left: 1%;
+
+
+        font: {
+          size: 22px;
+          family: 'Questrial', sans-serif;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+@keyframes growRight {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    top: 10%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+@media (min-width: 1920px) and (max-height: 1080px) {
+  .main #particles-js {
+    width: 102%;
+  }
+
+  .main .nav .title {
+    line-height: 150px;
+  }
+
+  .main .content .disc-container #disc-text {
+    font-size: 41px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+}
+
+@media (max-width: 1366px) and (max-width: 768px) {
+
+  .main #particles-js {
+    width: 102%;
+  }
+
+  .main .nav .title {
+    line-height: 115px;
+  }
+
+  .main .content .disc-container #disc-text {
+    font-size: 29px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .main .nav {
+    width: 102%;
+  }
+
+  .row {
+
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+
+}
+
+@media (max-width: 1280px) and (max-width: 1024px) {
+
+  .main #particles-js {
+    width: 102%;
+  }
+
+  .main .content .img-container .pic {
+    left: 29%;
+  }
+
+  .main .nav .title {
+    line-height: 138px;
+  }
+
+  .main .content .disc-container #disc-text {
+    font-size: 32px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .main .content {
+    width: 103.5%;
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) and (min-height: 768px) {
+
+  .main .content .img-container .pic {
+    left: 29%;
+  }
+
+  .main .nav .title {
+    line-height: 113px;
+  }
+
+  .main .content .disc-container #disc-text {
+    font-size: 25px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .main .content .disc-container .organizations .contact-container {
+    width: 81%;
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+
+
+}
+
+@media (max-width: 375px) {
+
+  .main {
+    overflow: hidden;
+  }
+  .main .nav .title{ 
+    line-height: 113px;
+  }
+
+  .main .content {
+    width: 95.5%;
+  }
+  .main .content .img-container {
+    display: none;
+  }
+
+  .main .content .disc-container {
+    width: 100%;
+    top: -5%;
+  }
+
+  .main #particles-js {
+    width: 100%;
+  }
+
+  .main .nav .title {
+    left: 1%;
+    top: -3%;
+    position: relative;
+    font-size: 70px;
+  }
+
+  .main .content .overlay {
+    height: 100%;
+    width: 110%;
+  }
+
+  .main .content .disc-container #disc-text {
+    font-size: 19px;
+  }
+
+  .main .nav {
+    width: 100%;
+  }
+
+  .row {
+    .hamburger, .nav-menu {
+      left: 86%;
+    }
+  }
+  
+}
+
+@media (max-width: 360px) {
+   .main .content .disc-container .discption {
+     top: -5%;
+   }
+   .main .content .disc-container {
+     top: 0%;
+   }
+ 
+}

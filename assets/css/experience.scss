@@ -1,0 +1,409 @@
+/* 
+The Style sheet for the about page.
+Constructed using Scss
+*/
+
+// Color Palette
+$hardbackground: #222831;
+$softbackground: #393E46;
+$background: #00ADB5;
+$highlight: #00FFF5;
+$softhighlight: #FFFBFC;
+
+$card-spacing: 40px;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: $softbackground;
+  font-family: 'Questrial', sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  padding: 0px;
+
+  #particles-js{
+      width: 100%;
+      height: 15%;
+      position: absolute;
+      background-color: $hardbackground;
+    }
+
+  .nav {
+    width: 100%;
+    height: 15%;
+    position: relative;
+    margin: 0px;
+
+    .bottom {
+      width: 0%;
+      height: 2px;
+      background-color: $highlight;
+      top: 100%;
+      animation: growRight 0.5s ease-in 0s 1;
+      animation-fill-mode: forwards;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #393E46;
+      left: 2%;
+      top: 18%;
+      border-radius: 150px;
+      opacity: 0.6;
+      transition: 0.7s;
+      position: absolute;
+
+      svg {
+        position: absolute;
+        top: -34%;
+        left: -81%;
+        height: 86px;
+      }
+    }
+
+   .invis {
+      top: 18%;
+      left: 2%;
+      background-color: transparent;
+      overflow: hidden;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .title {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 89px;
+      letter-spacing: 9px;
+      //position: absolute;
+      color: $softhighlight;
+      //background-color: $softbackground;
+      opacity: 0.8;
+      //border-radius: 35px;
+      transition: 0.4s;
+    
+      font: {
+        //family: 'Lobster', cursive;
+          //family: 'Rubik', sans-serif;
+        size: 88px;
+        weight: bold;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0px;
+
+    .overlay {
+      height: 150%;
+      width: 100%;
+      opacity: 0.2;
+      background-color: black;
+    }
+
+    .card-container {
+      width: 80%;
+      position: absolute;
+      height: 100%;
+      top: 7%;
+      left: 10%;
+      perspective: 1000px;
+
+      #card {
+        position: relative;
+        margin: 0px 5px 5px 0px;
+        height: 170px;
+        display: inline-block; 
+        width: 320px;
+        left: 2%;
+        cursor: pointer;
+        transition: 0.2s;
+        color: $softhighlight;
+        text-align: center;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+
+        &:hover {
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        .front, .back {
+          background: $hardbackground;
+          height: 100%;
+          width: 100%;
+          top: 0%;
+          left: 0%;
+          position: absolute; 
+          //z-index: 2;
+          backface-visibility: hidden;
+        }
+
+
+
+        .front {
+          /* for firefox 31 */
+          transform: rotateY(0deg);
+        }
+        .back {
+          transform: rotateY(180deg);
+
+          .header-b {
+            position: relative;
+            top: 15px;
+
+            font-size: 24px;
+
+            .title {
+              position: relative;
+              left: 27px;
+              display: inline-block;
+            }
+            .web-link {
+              position: relative;
+              top: -6px;
+              left: 73px;
+              display: inline-block;
+              transition: 0.4s;
+
+              &:hover {
+                color: $highlight;
+              }
+            }
+          }
+
+          .description {
+            position: relative;
+            top: 16px;
+            font-size: 14px;
+            text-align: left;
+
+          }
+        
+        }
+
+
+        .header {
+          position: relative;
+          top: $card-spacing;
+          .header-text {
+            font: {
+              size: 24px;
+              weight: bold;
+            }
+
+          }
+        }
+
+        .role-text {
+          position: relative;
+          top: $card-spacing + 2;
+          font-size: 18px;
+          opacity: 0.8;
+        }
+      }
+
+      .time-text {
+        position: relative;
+        top: $card-spacing + 2;
+        opacity: 0.6;
+      }
+    }
+
+    
+  }
+
+}
+.flip { transform: rotateY(180deg); }
+
+
+@keyframes growRight {
+  to {
+    width: 100%;
+  }
+}
+
+/* Media Queries */
+
+@media (min-width: 1920px) and (max-height: 1080px){
+  .main #particles-js {
+    width: 102%;
+  }
+
+  .main .nav .title {
+    line-height: 150px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .main .content .projects-container .selection-container #button {
+    line-height: 48px;
+    font-size: 32px;
+    height: 47%;
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+}
+
+@media (max-width: 1366px) and (max-width: 768px){
+
+  .main #particles-js {
+    width: 100%;
+  }
+
+  .main .nav .title {
+    line-height: 115px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .main .content .projects-container .selection-container #button {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+
+}
+
+@media (max-width: 1280px) and (max-width: 1024px) {
+
+  .main #particles-js {
+    width: 100%;
+  }
+
+  .main .nav .title {
+    line-height: 138px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .main .content .projects-container .selection-container #button {
+    height: 40%;
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) and (max-height: 768px) {
+
+  .main .content .projects-container .selection-container #button {
+    font-size: 20px;
+    height: 49%;
+  }
+
+  .main .content .card-container {
+    left: 18%;
+  }
+
+  .main .content .projects-container {
+    left: 34%;
+  }
+
+  .main .content .projects-container .selection-container {
+    left: 2%;
+  }
+
+  .main .nav .title {
+    line-height: 113px;
+  }
+
+  .main .nav .logo, .main .nav .invis {
+    top: 30%
+  }
+
+  .row {
+    .hamburger {
+      left: 94%;
+      top: 30%;
+    }
+  }
+
+
+}
+
+@media (max-width: 375px) {
+
+  .main #particles-js {
+    width: 111%;
+  }
+
+  .main .content .card-container {
+    left: 13%;
+  }
+
+  .main .nav .title {
+    left: 2%;
+    top: -3%;
+    position: relative;
+    font-size: 36px;
+  }
+
+  .main .content .projects-container {
+    left: 29%;
+  }
+
+  .main .content .overlay {
+    height: 100%;
+    width: 110%;
+  }
+
+  .main .content .projects-container .selection-container, .main .content .info-container, .main .content .overlay {
+    display: none;
+  } 
+
+  .main .nav {
+    width: 110%;
+  }
+
+  .row {
+    .hamburger, .nav-menu {
+      left: 86%;
+    }
+  }
+  
+}
+
+@media (max-width: 360px) {
+   .main .content .disc-container .discption {
+     top: -5%;
+   }
+ 
+}

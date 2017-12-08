@@ -1,0 +1,231 @@
+/* 
+The Style sheet for the about page.
+Constructed using Scss
+*/
+
+// Color Palette
+$hardbackground: #222831;
+$softbackground: #393E46;
+$background: #00ADB5;
+$highlight: #00FFF5;
+$softhighlight: #FFFBFC;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: $softbackground;
+  font-family: 'Questrial', sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  padding: 0px;
+
+  #particles-js{
+      width: 100%;
+      height: 13%;
+      position: absolute;
+      background-color: $hardbackground;
+    }
+
+  .nav {
+    width: 100%;
+    height: 13%;
+    position: relative;
+    margin: 0px;
+
+    .bottom {
+      width: 0%;
+      height: 2px;
+      background-color: $highlight;
+      top: 100%;
+      animation: growRight 0.5s ease-in 0s 1;
+      animation-fill-mode: forwards;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #393E46;
+      left: 2%;
+      top: 18%;
+      border-radius: 150px;
+      opacity: 0.6;
+      transition: 0.7s;
+      position: absolute;
+
+      svg {
+        position: absolute;
+        top: -34%;
+        left: -81%;
+        height: 86px;
+      }
+    }
+
+   .invis {
+      top: 18%;
+      left: 2%;
+      background-color: transparent;
+      overflow: hidden;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .title {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 70px;
+      letter-spacing: 9px;
+      //position: absolute;
+      color: $softhighlight;
+      //background-color: $softbackground;
+      opacity: 0.8;
+      //border-radius: 35px;
+      transition: 0.4s;
+    
+      font: {
+        //family: 'Lobster', cursive;
+          //family: 'Rubik', sans-serif;
+        size: 72px;
+        weight: bold;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0px;
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      opacity: 0.2;
+      position: relative;
+      background-color: black;
+      z-index: -11;
+    }
+
+    .contact-container {
+      position: absolute;
+      top: 4%;
+      width: 79%;
+      left: 10%;
+      height: 80%;
+      text-align: center;
+
+      #contact-item {
+        position: relative;
+        display: inline-block;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+        color: $softhighlight;
+        margin: 15px 0px 0px 15px;
+        cursor: pointer;
+        border-radius: 100px;
+        transition: 0.3s;
+
+        &:hover {
+          background: $softhighlight;
+        }
+      }
+
+      #custom-item {
+        position: relative;
+        display: inline-block;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+        color: $softhighlight;
+        margin: 15px 0px 0px 15px;
+        border-radius: 100px;
+      }
+
+      .email-icon {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 100px;
+        left: 0%;
+        font-size: 90px;
+        border: 6px solid $softhighlight;
+        
+        .icon {
+          position: relative;
+          top: 25%;
+        }
+
+        &:hover {
+          color: $softbackground;
+        }
+      }
+
+      .cfsvg {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 100px;
+        border: 6px solid $softhighlight;
+        z-index: -1;
+        transition: 0.3s;
+
+        polygon {
+          fill: $softhighlight;
+        }
+
+        svg {
+          position: relative;
+          right: 77%;
+          top: -17%;
+          height: 145%;
+        }
+
+      }
+
+      .ghost-selector {
+        position: absolute;
+        border-radius: 100px;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .linkedinsvg,
+      .githubsvg,
+      .facebooksvg,
+      .behancesvg {
+        width: 100%;
+        position: absolute;
+
+        path, rect {
+          fill: $softhighlight;
+        }
+
+        &:hover {
+          .p1, rect {
+            fill: $softbackground;
+          }
+        }
+      }
+    } 
+  }
+}
+
+
+@keyframes growRight {
+  to {
+    width: 100%;
+  }
+}

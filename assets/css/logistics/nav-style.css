@@ -1,0 +1,81 @@
+.hamburger {
+	position: absolute;
+	background-color: #393E46;
+	border-radius: 150px;
+	height: 50px;
+	width: 50px;
+	top: 18%;
+	opacity: 0.6;
+	left: 94%;
+	outline: none;
+}
+
+.hamburger:focus {
+	outline: none;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	background-color: #00FFF5;
+	outline: none;
+}
+
+.hamburger-inner {
+	transform: scale(0.8, 0.8);
+}
+
+.hamburger-box {
+	right: 10px;
+    top: -2px;
+    outline: none;
+}
+
+.nav-menu {
+	position: absolute;
+	height: 300px;
+	width: 50px;
+	top: 90%;
+	left: 94%;
+	z-index: 1;
+	outline: none;
+}
+
+.nav-item1 {
+	margin-bottom: 10px;
+	position: relative;
+	background-color: #222831;
+	border-radius: 150px;
+	height: 50px;
+	width: 50px;
+	outline: none;
+	text-align: center;
+	color: #00FFF5;
+	font-size: 26px;
+	transition: 0.4s;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.invis-c {
+	margin-bottom: 10px;
+	position: absolute;
+	border-radius: 150px;
+	height: 50px;
+	width: 50px;
+	outline: none;
+	transition: 0.4s;
+	cursor: pointer;
+	z-index: 1;
+	display: none;
+}
+
+.glyphicon {
+	margin: 0 auto;
+	top: 10px;
+}
+
+.sunglasses { top: 9px; left: 1px; }
+.briefcase { top: 11px; }
+.folder { top: 9px; right: 1px; }
+.file { left: 2px; }
+
+

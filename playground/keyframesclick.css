@@ -1,0 +1,94 @@
+body {
+	background-color: black;
+}
+
+#playground {
+	width: 100%;
+	height: 100%;
+}
+
+
+#ball {
+	position: absolute;
+	border-radius: 100px;
+	cursor: pointer;
+	background-color: white;
+	/*transition: 0.4s;*/
+	width: 100px;
+	height: 100px;
+}
+
+
+.primary:hover {
+	transform: scale(1.02, 1.02);
+	animation: colorflip 0.7s linear 0s infinite alternate;
+}
+
+.primary {
+	left: 571px;
+    top: 241px;
+	width: 100px;
+	height: 100px;
+}
+
+.second {
+	width: 100px;
+	height: 100px;
+}
+
+.spread-s1 { animation: spread-s1 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s2 { animation: spread-s2 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s3 { animation: spread-s3 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s4 { animation: spread-s4 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s5 { animation: spread-s5 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s6 { animation: spread-s6 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s7 { animation: spread-s7 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.spread-s8 { animation: spread-s8 0.5s linear 0s 1, shrink 0.5s linear 0s 1, colorflip 0.1s linear 0s 1; }
+.stick { animation-fill-mode: forwards; }
+
+@keyframes spread-s6 { to { top: 100%; left: 100%; } }
+@keyframes spread-s5 { to { top: 0%; left: 0%; } }
+@keyframes spread-s1 { to { top: 100%; left: 48.5%;} }
+@keyframes spread-s4 { to { top: 0%; left: 48.5%;} }
+@keyframes spread-s2 { to { left: 100%; top: 48.5%;} }
+@keyframes spread-s3 { to { left: 0%; top: 48.5%;} }
+@keyframes spread-s7 { to { top: 0%; left: 100%; } }
+@keyframes spread-s8 { to { top: 100%; left: 0%; } }
+@keyframes shrink { to { height: 0px; width: 0px;} }
+
+
+@keyframes colorflip {
+	0% {
+		background-color: #3A506B;
+	}
+	50% {
+		background-color: #5BC0BE;
+	}
+	100% {
+		background-color: #6FFFE9;
+	}
+}
+
+@keyframes colorflip-pink {
+	0% {
+		background-color: #E52478;
+	}
+	50% {
+		background-color: #EA638C;
+	}
+	100% {
+		background-color: #FFD9DA;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'SignPainter-HouseScript';
+  src: url('../../resources/svg-font/signpainter-housescript-webfont.woff');
+  src: local('signpainter-housescript-webfont'),
+    url("../../resources/svg-font/signpainter-housescript-webfont.woff") format("woff"),
+    url("../../resources/svg-font/signpainter-housescript-webfont.woff2") format("woff2");
+}
