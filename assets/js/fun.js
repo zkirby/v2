@@ -11,7 +11,8 @@ $(document).ready(function() {
     "3" : ["Old Minecraft Mods", "https://www.planetminecraft.com/member/copper-sulfate/"],
     "4" : ["Dynamic Planet Notes", "https://docs.google.com/document/d/1ylIeElYrcm_4QdQprXTkzr71W9aAPLRamSC1RF9-1m8/edit?usp=sharing"],
     "5" : ["Top Ten Movies", "https://docs.google.com/document/d/1MxZvgES9jKtQBMRXjx4Jjf_Uh-deGi8vC2q0mV2vb3A/edit?usp=sharing"],
-    //"8" : ["Tips for Regents Interview", "https://docs.google.com/document/d/1HpzL5ATrXyj1TWiSVbakZFBqSG3ZZkCzbN6h3-ofTFM/edit?usp=sharing"]
+    //"8" : ["Tips for Regents Interview", "https://docs.google.com/document/d/1HpzL5ATrXyj1TWiSVbakZFBqSG3ZZkCzbN6h3-ofTFM/edit?usp=sharing"],
+    "6" : ["Game", "../../playground/question4.html"]
   }
 
   $logo.click(function() {
